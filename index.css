@@ -1,0 +1,165 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*body最寬900px，最小660px 拉大會置中*/
+body{
+	max-width:900px;
+	min-width:660px;
+	margin: 0 auto;
+}
+
+header{
+	text-align: center;
+	font-family: 
+}
+body>nav{
+	text-align: center;
+	width: 80%;
+}
+nav>ul{
+	list-style: none;
+	margin: 0;
+    padding: 0;
+    background-color: #444444;
+    /*會按照字的大小平均分配寬度*/
+    display: flex;
+}
+nav > ul > li{
+	flex: auto;
+	display: inline-block;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	padding: 15px 30px;
+
+	border-right: 1px solid #bbb;
+}
+nav > ul > li > a{
+	color: white;
+	text-decoration: none;
+	font-weight: 800;
+}
+nav > ul > li:hover{
+	color: black;
+	background-color: #CC0000
+}
+nav > ul > li:nth-child(1){
+	border-left: 1px solid #bbb;
+}
+
+/*用CSS實作下拉式選單*/
+nav > ul > li:hover .submenu{
+	display: block;
+}
+.submenu{
+	position: absolute;
+	left: 123px;
+	top: 138px;
+	width:187px;
+	display: none;
+}
+.submenu>li{
+	display: block;
+	background-color: #AAAAAA;
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	padding: 15px 30px;
+	border-bottom: 1px solid #bbb;
+}
+.submenu>li:hover{
+	background-color: #FF8888;
+	color: black;
+}
+
+
+/*左邊內容佔版面70%*/
+.content{
+	width: 80%;
+	float: left;
+}
+
+/*文繞圖*/	
+#far{
+	float: right;
+	width: 350px;
+	border-radius: 5px;
+	margin: 50px auto auto 20px;  
+}
+
+#allILove{
+	margin-top: 50px;
+	display: block;
+}
+#cat{
+	float: left;
+	width: 350px;
+	border-radius: 5px;
+	margin-right: 20px;
+	margin-bottom: 50px;
+}
+
+#experience{
+	clear: left;
+}
+
+
+aside{
+	max-width:300px;
+	min-width:200px;
+	background-color: #FFFCEC;
+	border-radius: 5px;
+	/*隨頁面滑動*/
+	position: fixed;
+	right: 0;
+	bottom: 10px;
+}
+
+#community{
+	margin-top: 50px;
+	margin-left: 50px;
+	width: 70%;
+	display: block;
+}
+#community a:link{
+	color: #0000FF;
+}
+#community a:visited{
+	color: #444444;
+}
+#community .link:nth-child(even){
+	background-color: #dddddd;
+}
+#community .link:nth-child(odd){
+	background-color: #aaaaaa;
+}
+
+#contactMe{
+	width: 70%;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	display: block;
+}
+#contactMe input[type=radio]:checked +label{
+	font-size: 2em;
+}
+#contactMe input[type=text]:focus{
+	background-color: #FFFFBB;
+}
+#contactMe input[type=email]:focus{
+	background-color: #FFFFBB;
+}
+#contactMe textarea:focus{
+	background-color: #FFFFBB;
+}
+#contactMe input[type=submit]{
+	pointer-events: none;
+	opacity: 0.3;
+}
+#contactMe input[type=email]:valid~input[type=submit]{
+	pointer-events: auto;
+	opacity: 1;
+}
